@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+        <title>Documdent</title>
+        <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="prog">
+        <div class="prog_info">
+            QEMU — свободная программа с открытым исходным кодом для эмуляции аппаратного обеспечения различных платформ. Эмулятор QEMU прост в установке и относительно прост в использовании. <br /> Не оснащен графическим интерфейсом для обеспечения его настройки - это просто команды терминала. Демонстрирует хорошую стабильность. 
+        </div>
+        <div class="vozm">
+            <ul>
+                <p>Основные возможности:</p>
+                <li>Быстрый и стабильный эмулятор, использующий динамическую трансляцию для достижения хорошей скорости эмуляции</li>
+                <li>Имеет два режима работы: эмуляция всей системы и эмуляция пользовательского режима</li>
+                <li>Может работать на системе-хозяине без драйвера, обеспечивая при этом удовлетворительную производительность</li>
+                <br />
+                <p>Основные команды для создания и управления виртуальной машиной через консоль:</p>
+                <li>qemu-system — задает архитектуру виртуальной машины.</li>
+                <li>qemu-img create — создает файл виртуального IMG -диска, на который будет устанавливаться операционная система.</li>
+                <li>-m — выделяет виртуальной ОС указанный объем оперативной памяти.</li>
+                <li>-hda — подключает созданный виртуальный диск.</li>
+                <li>boot IMG — указывает, что загрузка должна производиться с виртуального диска, вместо IMG следует указать имя IMG -файла.</li>
+                <li>cdrom — содержит путь к установочному образу ISO, эмулирует дисковод.</li>
+            </ul>
+        </div>
+        <div class="prog_opis">
+            У qemu нет графического интерфейс, всё взаимодействие происходит через командную строку. Запустим командную строку нажатием комбинации клавиш "Windows+R" и пропишем "cmd". У нас откроется командная строка.  <br />
+            <br />Создаем виртуальный жесткий размером 5 ГБ образа IMG с названием c. <br />
+            Команда: <div class="com" style="color: aqua;">qemu-img.exe create -f raw c.img 5000M</div>
+            Теперь необходимо создать виртуальную машину, указать ее архитектуру, выбрать откуда она будет грузиться, а также указать путь к ISO-файлу <br />
+            Команда: <div class="com" style="color: aqua;">qemu-system-i386w.exe -boot c -m 350 -hda c.img –cdrom «C:\Users/maxum/Downloads/winXP.iso»</div>
+            После чего у нас открывается qemu с установкой Windows
+            <img src="qemu_img/1.png" alt="" style="padding-top: 10px; width: 800px; margin: 10px auto 20px;
+            display: block;">
+            
+        </div>
+    </div>
+</body>
+</html>
