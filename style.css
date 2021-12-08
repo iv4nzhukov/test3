@@ -258,7 +258,7 @@ body {
     padding-left: 70px;
 }
 .about_vm {
-    padding-top: 10px;
+    padding-top: 5px;
     padding-left: 250px;
     padding-right: 250px;
     max-width: 1420px;
@@ -285,7 +285,7 @@ body {
     text-transform: uppercase;
 }
 .info {
-    padding: 20px;
+    padding: 10px;
     display: flex;
     justify-content: center; 
     max-width: 1420px;
